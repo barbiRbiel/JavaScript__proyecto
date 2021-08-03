@@ -1,0 +1,861 @@
+/*GENERAL*/
+body{overflow-x: hidden;}
+.container__scroll{
+    scroll-snap-type: y mandatory;
+    overflow-y: scroll;
+    height: 100vh;
+    overflow-x: hidden;
+    background-image: url(../img/aboutcontact.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: #0062cc;
+}
+section{
+    scroll-snap-align: start;
+}
+
+/*RESPONSIVE | MOBILE */
+/*navbar*/ /*background-color: #111132;*/
+nav{
+    background-color: #111132;
+}
+.nav__font{
+    color: #D923CD;
+    font-size: 15px;
+    text-shadow: 1px 1px 9px #ffffffa9;
+    font-family: 'Montserrat', sans-serif;
+}
+.nav__logo{width: 100px;}
+.navbar__hamburguer{
+    background-image: url(../img/menu.png);
+    width: 25px;
+}
+
+/*SECTION 1*/
+.hero {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url(../img/section1.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    filter: brightness(80%);
+}
+.hero-content {
+    position: relative;
+    font-family: "Monserrat", sans-serif;
+    color: white;
+    text-align: center;
+    margin: 0.625rem;
+}
+.hero-title {
+    font-size: 65px;
+    text-shadow: 1px 1px 1px black;
+    font-weight: 600;
+    margin-bottom: 0;
+    font-family: 'Kirang Haerang', cursive;
+}
+.hero-subtitle {
+    font-size: 16px;
+    margin-left: 7vh;
+    margin-right: 7vh;
+    font-weight: 200;
+    margin-top: 1rem;
+    text-shadow: 1px 1px 1px black;
+}
+
+.hero-button {
+    background-color: #D923CD;
+    color: white;
+    border: 1px solid #cb376a;
+    padding: 0.9375rem1.875rem;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 15px;
+    font-weight: 200;
+    width: 130px;
+    cursor: pointer;
+    box-shadow: 1px 1px 1px 1px rgba(255, 255, 255, 0.671);
+    border-radius: 70% 30% 30% 70% / 60% 40% 60% 40%;
+}
+.hero-button:hover {
+    background-color: #9048D9;
+    color: white;
+    border: 1px solid #db7598;
+}
+.heartbeat{
+    -webkit-animation: heartbeat 8s;
+            animation: heartbeat 8s;
+    -webkit-animation-timing-function: ease-out;
+            animation-timing-function: ease-out;
+    -webkit-animation-iteration-count: infinite;
+            animation-iteration-count: infinite;
+}
+    @keyframes heartbeat{
+        0%, 20%, 40%, 60%, 80%, 100%
+        {
+            transform: scale(1);
+        }
+        10%, 30%, 50%, 70%, 90%
+        {
+            transform: scale(1.15);
+        }
+    }
+    @-webkit-keyframes heartbeat{
+        0%, 20%, 40%, 60%, 80%, 100%
+        {
+            -webkit-transform: scale(1);
+        }
+        10%, 30%, 50%, 70%, 90%
+        {
+            -webkit-transform: scale(1.15);
+        }
+    }
+
+/* SECTION 2*/
+#Game{
+    min-height: 100vh;
+    background-image: url(../img/about.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.card{
+    border-radius:0px;
+    min-height: 350px;
+    border-radius: 100px 100px 100px 100px;
+    box-shadow: 2px 2px 2px 2px rgba(46, 44, 44, 0.397);
+    margin-right: 3vh;
+    margin-left: 3vh;
+    border-color: rgba(46, 44, 44, 0.397);
+}
+.game__title{
+    text-align: center;
+    margin-top: 2vh;
+    font-size: 45px;
+    color: #9048D9;
+    text-shadow: 1px 1px 1px black;
+    font-family: 'Kirang Haerang', cursive;
+}
+.game__points{
+    text-align: center;
+    margin-top: 2vh;
+    margin-bottom: 3vh;
+    color: rgba(46, 44, 44, 0.397);
+    font-family: 'Montserrat', sans-serif;
+    font-size: 18px;
+}
+.game__profile {
+    width: 170px;
+    align-self: center;
+
+}
+
+#inputIngresado{
+    text-align: center;
+    margin-bottom: 3vh;
+    font-family: 'Kirang Haerang', cursive;
+    font-size: 25px;
+    color: #D923CD;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.801);
+}
+.card-title{
+    text-align: center;
+    margin-bottom: 3vh;
+    font-family: 'Kirang Haerang', cursive;
+    font-size: 25px;
+    color: #D923CD;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.801);
+}
+.card-text{
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 13px;
+    margin-right: 1vh;
+    margin-bottom: 6vh;
+    margin-left: 1vh;
+    color: #23104C;
+}
+#piedra {
+    background-color: transparent; 
+    margin-left: 14vh;
+    border-color: #9148d9; 
+    border-radius: 90px 90px 90px 90px;
+    padding: 12px 16px;
+    margin-bottom: 1vh;
+    box-shadow: 2px 3px 0px 2px rgba(56, 55, 55, 0.205);
+    cursor: pointer; 
+    transform: 1s;
+}
+#papel {
+    background-color: transparent; 
+    margin-left: 14vh;
+    border-color: #9148d9; 
+    border-radius: 90px 90px 90px 90px;
+    padding: 12px 16px;
+    margin-bottom: 1vh;
+    box-shadow: 2px 3px 0px 2px rgba(56, 55, 55, 0.205);
+    cursor: pointer; 
+    transform: 1s;
+}
+#tijera {
+    background-color: transparent; 
+    margin-left: 14vh;
+    border-color: #9148d9; 
+    border-radius: 90px 90px 90px 90px;
+    padding: 12px 16px;
+    margin-bottom: 1vh;
+    box-shadow: 2px 3px 0px 2px rgba(56, 55, 55, 0.205);
+    cursor: pointer; 
+    transform: 1s;
+}
+.game__btn--piedra:hover {
+    background-color: #9048D9;
+    box-shadow: 2px 3px 0px 2px #9148d97e;
+}
+.game__btn--papel:hover {
+    background-color: #9048D9;
+    box-shadow: 2px 3px 0px 2px #9148d97e;
+}
+.game__btn--tijera:hover {
+    background-color: #9048D9;
+    box-shadow: 2px 3px 0px 2px #9148d97e;
+}
+
+.game__btn--pc {
+    background-color: transparent; 
+    margin-left: 14vh;
+    border-color: #9148d9; 
+    border-radius: 90px 90px 90px 90px;
+    padding: 12px 16px;
+    margin-bottom: 1vh;
+    box-shadow: 2px 3px 0px 2px rgba(56, 55, 55, 0.205);
+    cursor: pointer; 
+    transform: 1s;
+}
+
+/*SECTION 3*/
+.about__container{
+    position: relative;}
+.about__name{
+    color: #ec6ae4;
+    font-family: 'Kirang Haerang', cursive;
+    font-size: 18px;
+    text-shadow: 1px 1px 1px blue;
+}
+.about__text{
+    text-shadow: 1px 1px 1px black;
+    color: white;
+    text-align: justify;
+    margin-left: 28vh;
+    font-size: 11px;
+    font-family: 'Montserrat', sans-serif;
+    position: absolute;
+}
+.about__text--bold{
+    color: #E06CCB;
+}
+.about__logo{
+    margin-top: 28vh;
+    margin-left: 40vh;
+    width: 0px;
+    height: 110px;
+}
+/*SECTION 4*/
+#Contact{
+    min-height: 100px;
+    background-color: #bbbbd891;;
+}
+
+/*SECTION 5*/
+#Share{
+    min-height: 100px;
+    background-color: #a1a1c58f;
+}
+
+/*footer*/
+footer{
+    background: #0d0d27;
+    margin-bottom: 0%;
+}
+.footer__copyright{
+    min-height: 30px;
+    color: white;
+    text-align: center;
+    font-size: 17px;
+    font-family: 'Montserrat', sans-serif;
+    text-shadow: 1px 1px 1px rgba(238, 130, 238, 0.486);
+}
+
+
+/* ------------------------------------ [ TABLET ] ------------------------------------*/ 
+@media screen and (min-width:768px) and (max-width: 1024px) {
+    /*navbar*/
+    .nav__font{font-size: 18px;}
+    .nav__logo{width: 130px;}
+    .navbar__hamburguer{width: 30px;}
+
+    /*SECTION 1*/
+    .hero-title {
+        font-size: 75px;
+        margin-bottom: 1vh;
+        text-shadow: 1px 1px 1px black;
+        font-weight: 600;
+        font-family: 'Kirang Haerang', cursive;
+    }
+    .hero-subtitle {
+        font-size: 18px;
+        margin-bottom: 8vh;}
+    .hero-button {
+        background-color: #D923CD;
+        color: white;
+        border: 1px solid #cb376a;
+        margin-top: 4rem;
+        padding: 0.9375rem1.875rem;
+        font-family: "Monserrat", sans-serif;
+        font-size: 18px;
+        font-weight: 200;
+        width: 200px;
+        cursor: pointer;
+    }
+    .hero-button:hover {
+        background-color: #cb376a;
+        border: 1px solid #db7598;
+    }
+
+    /* SECTION 2*/
+    .game__profile {width: 160px;}
+    #inputIngresado{
+        margin-bottom: 2vh;
+        font-size: 27px;
+    }
+    .card-title{
+        margin-bottom: 2vh;
+        font-size: 27px;
+    }
+    .card-text{font-size: 14px;}
+    #piedra {
+        margin-left: 9vh;
+        margin-bottom: 2vh;
+    }
+    #papel {
+        margin-left: 9vh;
+        margin-bottom: 2vh;
+    }
+    #tijera {
+        margin-left: 9vh;
+        margin-bottom: 2vh;
+    }
+    .game__btn--pc {
+        margin-left: 9vh;
+        margin-bottom: 2vh;
+    }
+
+    /*SECTION 3*/
+    .about__name{
+        font-size: 33px;
+    }
+    .about__text{
+        margin-left: 42vh;
+        font-size: 14px;
+    }
+    .about__text--bold{
+        color: #E06CCB;
+    }
+    /*SECTION 4*/
+    #Contact{
+        min-height: 100px;
+        background-color: #bbbbd891;;
+    }
+
+    /*SECTION 5*/
+    #Share{
+        min-height: 100px;
+        background-color: #a1a1c58f;
+    }
+
+    /*footer*/
+    footer{
+        background: #0d0d27;
+        margin-bottom: 0%;
+    }
+    .footer__copyright{
+        min-height: 30px;
+        color: white;
+        text-align: center;
+        font-size: 17px;
+        font-family: 'Montserrat', sans-serif;
+        text-shadow: 1px 1px 1px rgba(238, 130, 238, 0.486);
+    }
+}
+/* ------------------------------- [ DESKTOP ] -------------------------------*/
+@media screen and (min-width:1024px) {
+    /*navbar*/
+    .nav__font{margin-left: 18px;  font-size: 18px; color: rgba(255, 255, 255, 0.479); text-shadow: 0px 0px 0px;}
+    .nav__font:hover{ color: white;}
+    .nav__logo{width: 130px;}
+
+    /*SECTION 1*/
+    .hero-title {font-size: 85px;margin-top: 15vh;}
+    .hero-subtitle {
+        font-size: 20px;}
+    .hero-button {
+        margin-top: 3rem;
+        width: 200px;
+        border-color: #0d0d27;
+    }
+    #home__frases{
+        margin-top: 26vh;
+        font-family: 'Kirang Haerang', cursive;
+        font-size: 30px;
+        background-color: #9148d90c;
+        filter: drop-shadow(2px 2px 2px  rgba(255, 255, 255, 0.233));
+        border-radius: 29px 58px 87px;
+    }
+    #usuarioInput{
+        margin-top: 5vh;
+        margin-right: 1vh;
+        width: 260px;
+        color: white;
+        border-radius:  20% 40% 40% 20%;
+        background-color: #9048D9;
+        border-color: #0d0d27;
+        font-size: 15px;
+        box-shadow: 1px 1px 1px 1px rgba(255, 255, 255, 0.671);
+    }
+    .input__btn{
+        background-color: #9048D9;
+        border-color: #0d0d27;
+        color: white;
+        box-shadow: 1px 1px 1px 1px rgba(255, 255, 255, 0.671);
+        font-family: 'Kirang Haerang', cursive;
+        border-radius: 70% 30% 30% 70% / 60% 40% 60% 40%;
+    }
+
+    /* SECTION 2*/
+    .game__title{
+        font-size: 58px;
+        margin-top: 10vh;
+    }
+    .game__profile {width: 170px; margin-bottom: 1vh;}
+    #inputIngresado{
+        margin-bottom: 3vh;
+        font-size: 30px;
+    }
+    .card-title{
+        margin-bottom: 3vh;
+        font-size: 30px;}
+    .card-text{font-size: 15px;}
+    #veredicto{
+        text-align: center;
+        font-family: 'Kirang Haerang', cursive;
+        margin-top: 8vh;
+        margin-bottom: 2vh;
+        font-size: 40px;
+        color: darkslateblue;
+        text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.288);
+    }
+    #veredicto:hover{
+        color: #cb376a;
+        text-shadow: 1px 1px 1px #E06CCB;
+        font-size: 45px;
+    }
+    #veredicto__alien{
+        text-align: center;
+        font-family: 'Kirang Haerang', cursive;
+        margin-top: 8vh;
+        margin-bottom: 2vh;
+        font-size: 40px;
+        color: gray;
+        text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.288);
+    }
+    #piedra {
+        margin-left: 18vh;
+        margin-bottom: 2vh;
+    }
+    #papel {
+        margin-left: 9vh;
+        margin-bottom: 2vh;
+    }
+    #tijera {
+        margin-left: 9vh;
+        margin-bottom: 2vh;
+    }
+    #piedra:hover {
+        background-color: #9148d9;
+        box-shadow:0px 0px 0px 3px #23104c70;
+    }
+    #papel:hover {
+        background-color: #9148d9;
+        box-shadow:0px 0px 0px 3px #23104c70;
+    }
+    #tijera:hover {
+        background-color: #9148d9;
+        box-shadow:0px 0px 0px 3px #23104c70;
+    }
+    .game__btn--pc {
+        margin-left: 14vh;
+        margin-bottom: 2vh;
+    }
+    .game__you{
+        text-align: center;
+        font-family: 'Kirang Haerang', cursive;
+        font-size: 35px;
+        color: #23104C;
+    }
+    
+
+    /*SECTION 3*/
+    #about{
+        min-height: 400px;
+    }
+    .about__name{
+        font-size: 33px;
+    }
+    .about__p{
+        color: white;
+        margin-top: 15vh;
+        margin-right: 1vh;
+        margin-left: 50vh;
+        text-align: justify;
+    }
+
+    ul.timeline {
+        margin-top: 10vh;
+        margin-bottom: 10vh;
+        margin-left:9vh;
+        list-style-type: none;
+        position: relative;
+        padding-left: 1.5rem;
+    }
+    /* Timeline vertical line */
+    ul.timeline:before {
+        content: ' ';
+        background: #fff;
+        display: inline-block;
+        position: absolute;
+        left: 16px;
+        width: 5px;
+        height: 100%;
+        z-index: 400;
+        border-radius: 1rem;
+    }
+    li.timeline-item {
+        margin: 20px 0;
+    }
+    /* Timeline item circle marker */
+    li.timeline-item::before {
+        content: ' ';
+        display: inline-block;
+        position: absolute;
+        border-radius: 50%;
+        border: 3px solid #fff;
+        left: 11px;
+        width: 14px;
+        height: 14px;
+        z-index: 400;
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    }
+    .about__text--bold{
+        color: #E06CCB;
+    }
+    .float{
+        -webkit-animation: float 1.6s;
+                animation: float 1.6s;
+        -webkit-animation-iteration-count: infinite;
+        animation-iteration-count: infinite;
+    }
+    @keyframes float{
+        0%, 100%
+        {
+            transform: translateY(0);
+        }
+        50%
+        {
+            transform: translateY(-20px);
+        }
+    }
+    @-webkit-keyframes float{
+        0%, 100%
+        {
+            -webkit-transform: translateY(0);
+        }
+        50%
+        {
+            -webkit-transform: translateY(-20px);
+        }
+    }
+
+
+    /*  SECTION 4  */
+    .novisible{
+        color: rgba(255, 255, 255, 0);
+    }
+    #Contact{
+        min-height: 500px;
+        background-color: rgba(255, 255, 255, 0);
+    }
+    .contact-form{
+        background: #0063cc38;
+        border-radius: 180px 100px 180px 100px;
+        margin-top: 3vh;
+        margin-bottom: 1%;
+        width: 70%;
+    }
+    .contact-form .form-control{
+        border-radius:1rem;
+    }
+    .contact-image{
+        text-align: center;
+    }
+    .contact-image img{
+        border-radius: 6rem;
+        width: 11%;
+        margin-top: -3%;
+        transform: rotate(29deg);
+    }
+    .contact-form form{
+        padding: 14%;
+    }
+    .contact-form form .row{
+        margin-bottom: -7%;
+    }
+    .contact-form h3{
+        margin-bottom: 8%;
+        margin-top: -10%;
+        text-align: center;
+        color: white;
+        font-family: 'Kirang Haerang', cursive;
+        font-size: 35px;
+    }
+    .contact-form #btnContact {
+        margin-top: 5vh;
+        width: 50%;
+        border: none;
+        border-radius: 1rem;
+        padding: 1.5%;
+        background-color: #E06CCB;
+        font-weight: 600;
+        color: #fff;
+        cursor: pointer;
+    }
+    .contact-form #btnContact:hover {
+        background-color: #23104C;
+    }
+    .btnContactSubmit{
+        width: 50%;
+        border-radius: 1rem;
+        padding: 1.5%;
+        color: #fff;
+        background-color: #0062cc;
+        border: none;
+        cursor: pointer;
+    }
+
+
+    /*  FOOTER  */
+    footer{
+        background-color: #0063cc23;
+    }
+    .footer__social{
+        color: white;
+        font-family: 'Montserrat', sans-serif;
+        font-size: 16px;
+        margin-left: 33vh;
+        text-shadow: 1px 1px 1px black;
+    }
+    .footer__logo{
+        width: 190px;
+    }
+    .footer__about{
+        font-family: 'Montserrat', sans-serif;
+        font-size: 14px;
+        color: rgb(106, 235, 235);
+        text-shadow: 1px 1px 2px black;
+    }
+    .footer__social--icon{
+        width: 30px;
+    }
+    .footer__social--icon:hover{
+        background-color: #9148d9;
+        border-radius: 1px 9px 1px 9px;
+    }
+    .text-reset:hover{
+        color: white;
+    }
+    .footer__link{
+        color: white;
+        font-family: 'Montserrat', sans-serif;
+    }
+    .footer__link:hover{
+        color: #23104C;
+    }
+    .secciones{
+        color: white;
+        font-family: 'Kirang Haerang', cursive;
+        font-size: 23px;
+    }
+    .contacto{
+        color: white;
+        font-family: 'Kirang Haerang', cursive;
+        font-size: 23px;
+    }
+    .footer__cr{
+        font-family: 'Montserrat', sans-serif;
+        color: rgb(106, 235, 235);
+        text-shadow: 1px 1px 2px black;
+    }
+    .footer__cr:hover{
+        color: #9048D9;
+        font-size: 16px;
+        text-shadow: 1px 1px 1px black;
+    }
+    .contact__info{
+        color: white;
+        font-family: 'Montserrat', sans-serif;
+    }
+}
+
+/* CSS RENOVADO GAME */
+    .wrapper {
+        margin: 0 auto;
+        width: 980px;
+    }
+    #marcadores {
+        margin: 0 auto;
+        margin-bottom: 60px;
+        text-align: center;
+        width: 90%;
+    }
+    #marcadores #marcador-jugador {
+        background-image: url(../img/points.png);
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+    #marcadores #marcador-pc {
+        background-image: url(../img/planetalien1.png);
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+    #marcadores .marcador {
+        display: inline-block;
+        margin: 0 auto;
+        padding: 10px;
+        text-align: center;
+        width: 45%;
+    }
+    #marcadores .marcador .numero {
+        font-size: 40px;
+        color: white;
+        font-family: 'Kirang Haerang', cursive;
+        text-shadow: 1px 1px 1px black;
+        font-weight: bold;
+    }
+    #seleccionarJugada .jugada {
+        display: inline-block;
+        margin: 0 auto;
+        text-align: center;
+        position: relative;
+        width: 32%;
+    }
+    #seleccionarJugada .jugada img {
+        cursor: pointer;
+        
+    }
+    #seleccionarJugada .jugada img:hover {
+        -webkit-filter: blur(3px);
+        filter: blur(3px);
+        -webkit-transition: 0.2s ease-in-out;
+        transition: 0.2s ease-in-out;
+    }
+    #seleccionarJugada .jugada img:hover + .text {
+        visibility: visible;
+    }
+    #seleccionarJugada .jugada p.text {
+        top: 30%;
+        left: 35%;
+        font-size: 34px;
+        font-weight: bold;
+        visibility: hidden;
+        position: absolute;
+    }
+    .game__round{
+        font-family: 'Kirang Haerang', cursive;
+        color: white;
+        text-shadow: 1px 1px 1px black;
+        font-size: 38px;
+    }
+    .ultima-jugada-humano {
+        border-top: 3px solid #cb376a;
+    }
+    .ultima-jugada-pc {
+        border-bottom: 3px solid #0062cc;
+        }
+    .card-title--pc{
+        color: #0062cc;
+        text-align: center;
+        font-family: 'Kirang Haerang', cursive;
+        margin-bottom: 3vh;
+        font-size: 30px;
+        text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.801);
+    }
+
+    .shape {
+        position: absolute;
+        width: 50px;
+        height: 50px;
+        transform: scale(0.8);
+    }
+    .cir {
+        position: absolute;
+        border-radius: 50%;
+        z-index: 5;
+    }
+    .btn-contain {
+        width: 200px;
+        height: 100px;
+        margin-left: 6vh;
+        transform: translate(-50%, -50%);
+    }
+    
+    .btn {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        border-radius: 4px;
+        background: #333;
+        text-align: center;
+        z-index: 10;
+        transition: 0.2s;
+        cursor: pointer;
+        color: #fff;
+        box-shadow: 0px 1px 5px 2px rgba(255, 166, 0, 0.753);
+    }
+    .btn:active, .btn:hover, .btn:focus {
+        outline: none !important;
+        color: white;
+    } 
+    .btn-particles {
+        width: 100px;
+        height: 100px;
+        position: absolute;
+        border-radius: 50%;
+        color: #eee;
+        font-family: monospace;
+        z-index: 5;
+    /* 	filter: url(#gooeyness); */
+    }
+    .btn:active {
+        transform: scale(0.9) translate(-55%, -55%);
+    }

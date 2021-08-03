@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Google Fonts-->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Kirang+Haerang&family=Montserrat:wght@300&family=Press+Start+2P&display=swap" rel="stylesheet">
+    <!--Bootstrap CSS-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <!-- Mi CSS -->
+    <link rel="stylesheet" href="./assets/pages/style.css">
+    <!--AOS CSS-->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!--FavIcon-->
+    <link rel="shortcut icon" type="image/jpg" href="./assets/img/fav_icon.png"/>
+    <title>Playmaker ZONE</title>
+</head>
+<body>
+    <!------------------------------------------------------ NAVBAR ---------------------------------------------------------------------------------------->
+    <div class="row">
+        <div class="col-lg-12 col-xs-12">
+        <nav class="navbar navbar-expand-lg">
+            <div class="container-fluid">
+            <a class="navbar-brand" href="./index.html"><img src="./assets/img/logo2.png" class="nav__logo"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon ; navbar__hamburguer"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" aria-current="page" href="#Home"><h5 class="nav__font">Home</h5></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#Game"><h5 class="nav__font">Game</h5></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#About"><h5 class="nav__font">About</h5></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#Contact"><h5 class="nav__font">Contact</h5></a>
+                </li>
+                </ul>
+            </div>
+            </div>
+        </nav>
+        </div>
+    </div>
+
+    <!--container scroll-->
+    <div class="container__scroll">
+
+    <!----------------------------------------------------------------- [ Section 1 HOME ] ----------------------------------------------------------------->
+    <div class="row">
+        <div class="col-lg-12 col-xs-12">
+            <section id="Home" class="hero">
+                <div class="hero-content">
+                    <h1 class="hero-title">Discover the Galaxy</h1>
+                    <!--Form-->
+                    <form id="home__form" action="#">
+                        <input type="text" placeholder="Tú nombre... y dale ¡ enter !" id="usuarioInput">
+                        
+                    </form>
+                    <!---->
+                    <button type="submit" class="hero-button ; heartbeat" onclick="location.href='#Game'">¡ PLAY ! 🗿&nbsp;📃&nbsp;✂️</button>
+                    <!--Frases aleatorias-->
+                    <div id="home__frases"></div>
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <!----------------------------------------------------------------- [ Section 2 GAME ] ----------------------------------------------------------------->
+    <div class="row">
+        <div class="col-lg-12 col-xs-12">
+            <section id="Game">
+            <h1 class="game__title">ROUND</h1>
+            <div class="card-group">
+                <!--USER-->
+                <div class="card">
+                    <img src="./assets/img/user.png" class="card-img-top ; game__profile ; float" alt="user">
+                    <div class="card-body">
+                        <!--<h4 class="game__you">vos</h4>-->
+                        <h5 id="inputIngresado">Astronauta Planeta Tierra</h5>
+                        <!--puntos usuario-->
+                        <div id="marcadores">
+                            <div id="marcador-jugador" class="marcador">
+                                <span class="numero">0</span>
+                                <h2 class="game__round">Round ganados</h2>
+                            </div>
+                        </div>
+                        <!--botones usuario-->
+                        <div id="seleccionarJugada">
+                            <div class="jugada" data-jugada="0"><button id="piedra"><img src="./assets/img/stone.png" style="width: 100px;" class="game__piedra"></button></div>
+                            <div class="jugada" data-jugada="1"><button id="papel"><img src="./assets/img/paper.png" style="width: 100px;" class="game__papel"></button></div>
+                            <div class="jugada" data-jugada="2"> <button id="tijera"><img src="./assets/img/scissors.png" style="width: 100px;" class="game__tijera"></button></div>
+                        </div>
+                    
+                    <!---->
+                    </div>
+                </div>
+                <!--PC-->
+                <div class="card">
+                    <img src="./assets/img/alien.png" class="card-img-top ; game__profile ; float" alt="pc">
+                    <div class="card-body">
+                        <h5 class="card-title--pc">Alien - Planeta 0B91</h5>
+                        <!--puntos pc-->
+                        <div id="marcadores">
+                            <div id="marcador-pc" class="marcador">
+                                <span class="numero">0</span>
+                                <h2 class="game__round">Round ganados</h2>
+                            </div>
+                        </div>
+                        <!---->
+                    </div>
+                </div>
+                <!---->
+            </div>
+            </section>
+        </div>
+    </div>
+
+    <!----------------------------------------------------------------- [ Section 3 ABOUT ] ----------------------------------------------------------------->
+    <div class="row">
+        <div class="col-lg-12 col-xs-12">
+            <section id="About">
+                <div class="d-flex p-2 bd-highlight">
+                <div class="d-flex justify-content-evenly">
+                    <div class="container py-5">
+                            <div class="row">
+                                <div class="col-lg-7 mx-auto">
+                                    <!-- Timeline -->
+                                    <ul class="timeline">
+                                        <li class="timeline-item bg-white rounded ml-3 p-4 shadow">
+                                            <div class="timeline-arrow"></div>
+                                            <img src="./assets/img/planeta.png" style="width: 20px;">
+                                            <p class="text-small mt-2 font-weight-light"><strong class="about__name">Piedra, Papel o Tijera <br></strong> 
+                                                es un <strong>juego</strong> de manos en el que <strong> existen al menos 3 elementos:</strong> <br>
+                                                <strong class="about__text--bold">PIEDRA:</strong> vence a la tijera rompiéndola. <strong class="about__text--bold">TIJERA: </strong>vence al papel cortándolo y 
+                                                <strong class="about__text--bold">PAPEL</strong>  que vence a la piedra envolviéndola,<br>dando lugar a <strong>un círculo, que caracteriza al juego.</strong> <br>
+                                                Se utiliza con mucha frecuencia para decidir quién de dos personas hará algo, tal y como se hace a veces<br> usando una moneda, o para dirimir algún asunto</p>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    <img src="./assets/img/about1.png" style="margin-top: 10vh; margin-bottom: 10vh;" class="float">
+                <!--fb-->
+                </div>
+                <!--flexbox-->
+                </div>
+                <!---->
+            </section>
+        </div>
+    </div>
+
+    <!----------------------------------------------------------------- [ Section 4 CONTACT ] ----------------------------------------------------------------->
+    <div class="row">
+        <div class="col-lg-12 col-xs-12">
+            <section id="Contact">
+                <p class="novisible">.</p>
+                <div class="container contact-form">
+                    <div class="contact-image ; heartbeat">
+                        <img src="https://cdn.dribbble.com/users/1787323/screenshots/13932356/media/2a2f5f4bbf5fc9531ddb39660122e972.png?compress=1&resize=1000x750" alt="rocket_contact"/>
+                    </div>
+                    <form id="contact__form" method="post">
+                        <h3 class="contact__title"> Dejanos un mensaje </h3>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <input type="text" id="Nombre" name="Nombre" class="form-control" placeholder="Tú nombre *" value="" /><br>
+                                </div>
+                                <div class="form-group">
+                                    <input type="text" id="Email" name="Email" class="form-control" placeholder="Tú E-mail *" value="" /><br>
+                                </div>
+                                <div class="form-group">
+                                    <input type="text" id="Numero" name="Numero" class="form-control" placeholder="Tú número de celular *" value="" /><br>
+                                </div>
+                                <!--button-->
+                                    
+                                    <div class="btn-contain">
+                                        <button id="btnContact" class="btn">Enviar</button>
+                                        <div class="btn-particles"></div>
+                                    </div>
+                                    
+                                <!---------->
+                            </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <textarea id="Mensaje" name="Mensaje" class="form-control" placeholder="Envía tú consulta *" style="width: 100%; height: 150px;"></textarea>
+                                    </div>
+                                </div>
+                        </div>
+                    </form>
+                </div>
+            </section>
+        </div>
+    </div><br>
+
+
+    <!------------------------------------------------------ FOOTER ------------------------------------------------------------------------------------------------------------------------------------>
+    <div class="row">
+        <div class="col-lg-12 col-xs-12">
+            <!-- Footer -->
+                <footer class="text-center text-lg-start text-muted">
+                    <!-- Section: Social media -->
+                    <section class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom">
+                    <!-- redes texto -->
+                    <div class="footer__social ; me-5 d-none d-lg-block">
+                        <span>Conectate con nosotros en nuestras redes sociales:</span>
+                    </div>
+                
+                    <!-- social media -->
+                    <div>
+                        <a href="https://www.instagram.com/" class="me-4 text-reset">
+                            <img src="./assets/img/instagram.png" class="footer__social--icon"> <!--Instagram-->
+                        </a>
+                        <a href="https://twitter.com/home" class="me-4 text-reset">
+                            <img src="./assets/img/twitter.png" class="footer__social--icon"> <!--Twitter-->
+                        </a>
+                        <a href="https://www.linkedin.com/" class="me-4 text-reset">
+                            <img src="./assets/img/linkedin.png"  class="footer__social--icon"> <!--Linkedin-->
+                        </a>
+                    </div>
+                    <!--  -->
+                    </section>
+                    <!-- Section: Social media -->
+                
+                    <!-- Section: Links  -->
+                    <section class="">
+                    <div class="container text-center text-md-start mt-5">
+                        <!-- Grid row -->
+                        <div class="row mt-3">
+                        <!-- Grid column -->
+                        <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+                            <!-- Content -->
+                            <img src="./assets/img/logo2.png" class="footer__logo">
+                            <p class="footer__about">
+                            Compañia de creación de juegos virtuales. Desde 2005 - 2021.
+                            </p>
+                        </div>
+                        <!-- Grid column -->
+                
+                        <!-- Grid column -->
+                        <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+                            <!-- Links -->
+                            <h6 class="text-uppercase fw-bold mb-4 ; secciones">
+                            SECCIONES
+                            </h6>
+
+                            <a href="#Home" class="text-reset"><p class="footer__link">Home</p></a>
+                            <a href="#Game" class="text-reset"><p class="footer__link">Game</p></a>
+                            <a href="#About" class="text-reset"><p class="footer__link">About</p></a>
+                            <a href="#Contact" class="text-reset"><p class="footer__link">Contact</p></a>
+                        </div>
+                        <!-- Grid column -->
+                        <!-- Grid column -->
+                
+                        <!-- Grid column -->
+                        <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+                            <!-- Links -->
+                            <h6 class="text-uppercase fw-bold mb-4 ; contacto">
+                            Contacto
+                            </h6>
+                            <div class="contact__info">
+                                <p><i class="fas fa-home me-3"></i> Cabildo 1365, CABA, BSAS</p>
+                                <p>
+                                <i class="fas fa-envelope me-3"></i>
+                                info@playmaker.com
+                                </p>
+                                <p><i class="fas fa-phone me-3"></i> 4525 - 6262</p>
+                            </div>
+                        </div>
+                        <!-- Grid column -->
+                        </div>
+                        <!-- Grid row -->
+                    </div>
+                    </section>
+                    <!-- Section: Links  -->
+                
+                    <!-- Copyright -->
+                    <div class="text-center p-4 ; footer__cr" style="background-color: rgba(0, 0, 0, 0.05);">
+                    © 2021 Copyright:
+                    <a class="text-reset fw-bold" href="https://www.linkedin.com/in/barbara-bielicki-/"><i class="fab fa-whatsapp"></i>Bárbara R. Bielicki</a>
+                    </div>
+                    <!-- Copyright -->
+                </footer>
+            <!-- Footer -->
+        </div>
+    </div>
+
+    <!--cierre container scroll-->
+    </div>
+
+<!--JQuery-->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+<!--Mi Script-->
+<script src="./assets/pages/script.js"></script>
+<script type="text/javascript">mostrarFrases(); </script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.min.js" integrity="sha384-Atwg2Pkwv9vp0ygtn1JAojH0nYbwNJLPhwyoVbhoPwBhjQPR5VtM2+xf0Uwh9KtT" crossorigin="anonymous"></script>
+
+</body>
+</html>
