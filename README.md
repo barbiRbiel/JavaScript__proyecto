@@ -1,5 +1,5 @@
 # PIEDRA, PAPEL O TIJERA
---> Ingresa tu nombre para que tu personaje sea personalizado ;)
+--> Ingresa tu nombre para que tu personaje sea personalizado ;)   [dale enter al input]
 
 
 --> Dale "play" y ¡JUEGA!
